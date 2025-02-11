@@ -1,6 +1,5 @@
 "use client";
 
-/* eslint-disable no-unused-vars */
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
