@@ -11,10 +11,10 @@ const jakartasans = Plus_Jakarta_Sans({
 
 export const metadata = {
     title: "Hexagrab",
-    description: "Input and get the color!",
-    // icons: {
-    //     icon: "/favicon.png", // /public path
-    // },
+    description: "Grab your colors from any image!",
+    icons: {
+        icon: "icon.png",
+    },
 };
 
 export default function RootLayout({
