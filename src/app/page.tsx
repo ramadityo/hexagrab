@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import ColorBox from "@/components/ColorBox";
 import UploadBox from "@/components/UploadBox";
 import Image from "next/image";

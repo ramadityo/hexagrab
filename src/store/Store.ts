@@ -1,5 +1,5 @@
 import { create } from "zustand";
-
+/* eslint-disable no-unused-vars */
 interface ColorRGB {
     vibrantRgb?: number[];
     mutedRgb?: number[];

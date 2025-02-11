@@ -1,5 +1,6 @@
 "use client";
 
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { getVibrantColor, hexConvert } from "@/utils/algorithm";
 import useDataStore from "@/store/Store";

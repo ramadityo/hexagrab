@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
