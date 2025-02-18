@@ -2,7 +2,7 @@
   <h1><b>HexaGrab</b></h1>
 </div>
 
-![](assets\20250218_070002_hexagrab.png)
+![](assets/20250218_070002_hexagrab.png)
 
 <div align=center>
   Turn Images into Colors with One Upload
