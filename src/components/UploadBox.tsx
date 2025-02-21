@@ -53,7 +53,7 @@ function UploadBox() {
             {/* Gambar */}
             {image && (
                 <>
-                <img src={image} alt="" className="text-center max-h-full max-w-full w-[900] md:h-[500] object-contain" />
+                <img src={image} alt="" className="text-center max-h-full w-full md:h-[500] object-contain" />
                 </>
             )}
         </div>
