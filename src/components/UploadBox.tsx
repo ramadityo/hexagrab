@@ -28,7 +28,7 @@ function UploadBox() {
 
     return (
         <div
-            className={`relative ${image ? "w-max h-max" : "h-[500px] w-[900px]"} 
+            className={`relative h-[500px] w-[900px] 
                 max-w-full max-h-full outline-dashed outline-2 outline-gray-400 rounded-xl  
                 group overflow-hidden`}
         >
