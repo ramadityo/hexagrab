@@ -28,7 +28,7 @@ function UploadBox() {
 
     return (
         <div
-            className={`relative h-[500px] w-[900px] 
+            className={`relative md:h-[500px] w-[900px] 
                 max-w-full max-h-full outline-dashed outline-2 outline-gray-400 rounded-xl  
                 group overflow-hidden`}
         >
@@ -52,7 +52,9 @@ function UploadBox() {
 
             {/* Gambar */}
             {image && (
-                <img src={image} alt="" className="max-w-full max-h-full w-[900] h-[500] object-contain" />
+                <>
+                <img src={image} alt="" className="text-center max-h-full w-full md:h-[500] object-contain" />
+                </>
             )}
         </div>
     );
