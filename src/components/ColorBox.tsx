@@ -37,14 +37,14 @@ function ColorBox() {
     }, [colors]);
 
     return (
-        <div className="w-full h-12 mt-4 flex flex-col gap-4">
+        <div className="w-full h-12 my-4 flex flex-col gap-4 text-white">
             <p className={`text-center space-y-4 font-sans font-bold ${colors ? "hidden" : ""}`}>Dominant Color</p>
-            <div className="flex justify-between flex-wrap gap-2 relative">
+            <div className="flex justify-between flex-wrap gap-2 pb-2 flex-col md:flex-row relative">
                 {hexColor.map(
                     (color, index) =>
                         color && (
-                            <button key={index} onClick={handleCopy(index)} className="group flex-1 h-12 rounded-md cursor-pointer relative" style={{ backgroundColor: color }}>
-                                <div className="transition-all opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 flex items-center justify-center">{copied ? <IoCheckmarkDoneOutline /> : <IoIosCopy />}</div>
+                            <button key={index} onClick={handleCopy(index)} className="group h-12 md:flex-1 px-3 border-2 border-gray-600 rounded-md cursor-pointer relative" style={{ backgroundColor: color }}>
+                                <div className="transition-all opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 flex items-center justify-center">{copied ? <IoCheckmarkDoneOutline /> : color}</div>
                             </button>
                         )
                 )}
