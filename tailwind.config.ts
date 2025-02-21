@@ -6,6 +6,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ["var(--font-jakarta)"],
+                heading: 'Karla',
             },
             colors: {
                 background: "var(--background)",
