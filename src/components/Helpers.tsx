@@ -7,7 +7,7 @@ export default function Helpers() {
 
   return (
     <div className='absolute top-10 right-10 z-50'>
-      <button className='p-6 bg-white rounded-full text-black cursor-pointer' onClick={() => moveContainerUpload()}>
+      <button className='p-6 bg-white rounded-full text-black cursor-pointer' onClick={() => moveContainerUpload(true)}>
         Animate!
       </button>
     </div>
