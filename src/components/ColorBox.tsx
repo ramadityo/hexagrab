@@ -73,12 +73,12 @@ function ColorBox() {
                     Bulk copy!
                 </button>
             </div>
-            <div className="mt-4 title">
+            <div className="mt-4 title max-sm:hidden">
                 <h1 className="font-sans font-bold text-3xl text-white">Gradient Map</h1>
             </div>
 
             <div
-                className="relative gradients w-full h-full rounded-xl overflow-hidden"
+                className="relative gradients w-full h-full rounded-xl overflow-hidden max-sm:hidden"
                 style={{
                     background: `linear-gradient(to bottom, ${warna[0]}, ${warna[1]}, ${warna[2]}, ${warna[3]}, ${warna[4]}, ${warna[5]})`
                 }}
