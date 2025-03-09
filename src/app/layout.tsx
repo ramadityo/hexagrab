@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import FloatContainer from "@/components/FloatContainer";
+import Helpers from "@/components/Helpers";
 
 const jakartasans = Plus_Jakarta_Sans({
     subsets: ["latin"],
@@ -23,12 +25,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>  
+        <html lang="en" suppressHydrationWarning>
+            {/* <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>   */}
 
-            <body className={`${jakartasans.variable} antialiased`}>
+            <body className={`${jakartasans.variable} antialiased`} suppressHydrationWarning>
                 {children}
 
+                <FloatContainer />
+                {/* <Helpers /> */}
                 <Toaster />
             </body>
         </html>
