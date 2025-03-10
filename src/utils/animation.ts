@@ -41,12 +41,14 @@ function setColorAnimation(){
     gsap.set(".button", { scale: 1, opacity: 0 });
     gsap.set(".gradients", { scale: 0 });
     gsap.set(".copy-button", { opacity: 0, scaleX: 0});
-    gsap.set(".title", {opacity: 0, yPercent: 10})
+    gsap.set(".title", {opacity: 0, yPercent: 10});
+    gsap.set(".button-upload", {opacity: 0, scale: 0});
 }
 
 function initColorAnimation(){
     let tl = gsap.timeline();
-    tl.to(".button", { opacity: 1, stagger: 0.1, duration: 0.5, ease: "expo.out" });
+    tl.to(".button-upload", { opacity: 1, scale: 1, duration: 0.5, ease: "expo.inOut", transformOrigin: "bottom right" }, .1);
+    tl.to(".button", { opacity: 1, stagger: 0.1, duration: 0.5, ease: "expo.out" }, .5);
     tl.to(".copy-button", { opacity: 1, scaleX: 1, transformOrigin: "center", willChange: "transform", stagger: 0.1, duration: .5, ease: "expo.out" }, .5);
     tl.to(".title", {opacity: 1, yPercent: 0, willChange: "transform", ease: "expo.out" }, 0.5);
     tl.to(".gradients", { scale: 1, transformOrigin: "bottom center", stagger: 0.1, duration: 1, willChange: "transform", ease: "expo.inOut", onComplete: () => {

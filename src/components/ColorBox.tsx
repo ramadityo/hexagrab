@@ -41,7 +41,7 @@ function ColorBox() {
 
     useEffect(() => {
         if (!colors || colors.length === 0) return;
-        // setWarna([]);
+        setWarna([]);
 
         const newHexColors = colors.flatMap((colorObj) =>
             Object.values(colorObj || {}).map((rgb) => {
