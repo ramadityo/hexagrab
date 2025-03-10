@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import useDataStore from '@/store/Store'
 import ColorBox from './ColorBox';
+import UploadButton from './UploadButton';
 
 export default function FloatContainer() {
   const isAnimate = useDataStore((state) => state.isAnimate);
@@ -12,7 +13,10 @@ export default function FloatContainer() {
   }, [isAnimate])
   return (
     <div className={`${visible ? '' : 'hidden' } absolute inset-0 flex max-sm:flex-col gap-10 items-center justify-between p-10 z-30`}>
-        <div className='image-ct flex-1 max-sm:w-full h-full rounded-xl relative'></div>
+        <div className='image-ct flex-1 max-sm:w-full h-full rounded-xl relative'>
+
+          <UploadButton />
+        </div>
         <div className='flex-1 max-sm:w-full h-full'>
           <ColorBox />
         </div>
