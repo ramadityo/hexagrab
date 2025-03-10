@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import FloatContainer from "@/components/FloatContainer";
 import Helpers from "@/components/Helpers";
+import Preload from "@/components/Preload";
 
 const jakartasans = Plus_Jakarta_Sans({
     subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
             <body className={`${jakartasans.variable} antialiased`} suppressHydrationWarning>
                 {children}
 
+                <Preload />
                 <FloatContainer />
                 {/* <Helpers /> */}
                 <Toaster />
