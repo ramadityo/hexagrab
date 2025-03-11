@@ -1,19 +1,19 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
-// import * as PIXI from "pixi.js"
+// import * as THREE from "three";
+// import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
+import { useRef, useState } from "react";
+
 
 export default function DepthImage() {
+    const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
-    const containerRef = useRef<HTMLDivElement>(null);
     const handleDepth = () =>{
 
     }
 
-    useEffect(() =>{
-        handleDepth();
-    }, [])
     return (
-        <div className="relative w-full h-full" ref={containerRef}>   
-        </div>
+        <>
+            <canvas></canvas>
+        </>
     );
 }

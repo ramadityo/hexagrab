@@ -32,7 +32,7 @@ export default function RootLayout({
             <body className={`${jakartasans.variable} antialiased`} suppressHydrationWarning>
                 {children}
 
-                {/* <Preload /> */}
+                <Preload />
                 <FloatContainer />
                 {/* <Helpers /> */}
                 <Toaster />
