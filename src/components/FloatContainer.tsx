@@ -14,7 +14,6 @@ export default function FloatContainer() {
   return (
     <div className={`${visible ? '' : 'hidden' } absolute inset-0 flex max-sm:flex-col gap-10 items-center justify-between p-10 z-30`}>
         <div className='image-ct flex-1 max-sm:w-full h-full rounded-xl relative'>
-
           <UploadButton />
         </div>
         <div className='flex-1 max-sm:w-full h-full'>
