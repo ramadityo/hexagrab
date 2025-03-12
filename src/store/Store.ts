@@ -14,12 +14,14 @@ interface DataState {
     warna: string[]; 
     image: string;
     isAnimate: boolean;
+    isLoad: boolean;
     insertImage: (image: string) => void;
     addColorArray: (colors: ColorRGB) => void;
     removeColorArray: () => void;
     setWarna: (warna: string[]) => void;
     setAnimate: (animate: boolean) => void;
     setAnimateTrue: () => void;
+    setIsLoadTrue: () => void;
 }
 
 const useDataStore = create<DataState>()((set) => ({
@@ -27,7 +29,9 @@ const useDataStore = create<DataState>()((set) => ({
     warna: [],
     image: "",
     isAnimate: false,
+    isLoad: false,
     setAnimate: () => set((state) => ({ isAnimate: !state.isAnimate })),
+    setIsLoadTrue: () => set(() => ({ isLoad: true })), 
     setAnimateTrue: () => set(() => ({ isAnimate: true })),
     insertImage: (image: string) => set(() => ({ image })),
     addColorArray: (colors: ColorRGB) => set((state) => ({ colors: [...state.colors, colors] })),

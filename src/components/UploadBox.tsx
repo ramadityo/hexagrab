@@ -14,9 +14,8 @@ gsap.registerPlugin(Draggable);
 function UploadBox() {
     const insertImage = useDataStore((state) => state.insertImage);
     const removeColor = useDataStore((state) => state.removeColorArray);
-    const warna = useDataStore((state) => state.warna); // ✅ Ambil hex dari store
+    const warna = useDataStore((state) => state.warna);
 
-    // const [image, setImage] = useState<string | null>(null);
     const image = useDataStore((state) => state.image);
     const [isLightMode, setIsLightMode] = useState(false);
 
@@ -58,7 +57,7 @@ function UploadBox() {
     ]
 
     return (
-        <div className="upload-box h-[450px] w-[600px] max-md:w-full">
+        <div className="upload-box opacity-0 h-[450px] w-[600px] max-md:w-full">
             <div className={`box relative  h-full w-full outline-dashed outline-2 rounded-xl group overflow-hidden`} style={{ outlineColor: isLightMode ? warna[2] : warna[5] }}>
                 <div
                     className={`absolute flex flex-col items-center justify-center gap-2 transition-all 
@@ -72,9 +71,9 @@ function UploadBox() {
                         ""
                     ) : (
                         <>
-                            <p className="font-sans">Drag and drop image here</p>
-                            <p className="font-sans">or</p>
-                            <label htmlFor="image" className="text-blue-500 font-sans cursor-pointer">
+                            <p className="text-upload font-sans">Drag and drop image here</p>
+                            <p className="text-upload font-sans">or</p>
+                            <label htmlFor="image" className="text-upload text-blue-500 font-sans cursor-pointer">
                                 Browse
                             </label>
                         </>

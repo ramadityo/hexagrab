@@ -60,4 +60,17 @@ function initColorAnimation(){
     } }, 0.6);
 }
 
-export { moveContainerUpload, setColorAnimation, initColorAnimation };
+function setLoad(){
+    gsap.set(".upload-box", {scaleX: 0})
+    gsap.set(".image-DepthMap", {opacity: 0, scale: 1.1})
+    gsap.set(".text-preload", {opacity: 0, yPercent: 30})
+}
+
+function loadAnimation(){
+    let tl = gsap.timeline();
+    tl.to(".text-preload", {opacity: 1, stagger: 0.1, yPercent: 0, willChange: "transform", duration: 1, ease: "expo.out"});
+    tl.to(".image-DepthMap", {opacity: 1, scale: 1, willChange: "transform", duration: 2, ease: "expo.out"},.2);
+    
+}
+
+export { moveContainerUpload, setColorAnimation, setLoad, loadAnimation, initColorAnimation };
