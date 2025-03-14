@@ -57,7 +57,7 @@ function UploadBox() {
     ]
 
     return (
-        <div className="upload-box opacity-0 h-[450px] w-[600px] max-md:w-full">
+        <div className="upload-box h-[450px] w-[600px] max-md:w-full">
             <div className={`box relative  h-full w-full outline-dashed outline-2 rounded-xl group overflow-hidden`} style={{ outlineColor: isLightMode ? warna[2] : warna[5] }}>
                 <div
                     className={`absolute flex flex-col items-center justify-center gap-2 transition-all 
