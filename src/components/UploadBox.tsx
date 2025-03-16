@@ -16,16 +16,16 @@ import { InertiaPlugin } from "./InertiaPluginBt";
 gsap.registerPlugin(Draggable, InertiaPlugin);
 
 function UploadBox() {
+    // Zustand things
     const insertImage = useDataStore((state) => state.insertImage);
     const removeColor = useDataStore((state) => state.removeColorArray);
-    const warna = useDataStore((state) => state.warna);
-
-    const image = useDataStore((state) => state.image);
-    const [isLightMode, setIsLightMode] = useState(false);
-
     const setAnimateTrue = useDataStore((state) => state.setAnimateTrue);
     const isAnimate = useDataStore((state) => state.isAnimate);
+    const warna = useDataStore((state) => state.warna);
+    const image = useDataStore((state) => state.image);
+    const isLoad = useDataStore((state) => state.isLoad)
 
+    const [isLightMode, setIsLightMode] = useState(false);
     const imageRef = useRef<HTMLImageElement>(null);
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -100,19 +100,11 @@ function UploadBox() {
         });
     };
 
-    const [isDrag, setIsDrag] = useState(false);
 
-    const onHold = () => {
-        setIsDrag(true);
-    };
-
-    const onRelease = () => {
-        setIsDrag(false);
-    };
 
     return (
-        <div className="upload-box h-[450px] w-[600px] max-md:w-full">
-            <div ref={boxRef} className={`box relative  h-full w-full outline-dashed outline-2 rounded-xl group overflow-hidden`} style={{ outlineColor: isLightMode ? warna[2] : warna[5] }}>
+        <div data-cursor-size="200px" data-cursor-exclusion className={`upload-box h-[450px] max-sm:h-[250px] w-[600px] max-md:w-full ${isLoad ? "" : "hidden"}`}>
+            <div ref={boxRef} className={`box relative  h-full w-full outline-dashed outline-2 rounded-xl group overflow-hidden`} style={{ outlineColor: warna[2] }}>
                 <div
                     className={`absolute flex flex-col items-center justify-center gap-2 transition-all 
                      ${isAnimate ? "hidden" : "inset-0"}`}
