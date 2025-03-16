@@ -8,10 +8,12 @@ import { getVibrantColor } from "@/utils/algorithm";
 import { moveContainerUpload, setColorAnimation } from "@/utils/animation";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
-// import { InertiaPlugin } from "gsap-trial/all";
+// import { InertiaPlugin } from "./InertiaPlugin";
+import { InertiaPlugin } from "./InertiaPluginBt";
+// import InertiaPlugin from "gsap-trial/InertiaPlugin";
 
-gsap.registerPlugin(Draggable);
-// gsap.registerPlugin(Draggable, InertiaPlugin);
+// gsap.registerPlugin(Draggable);
+gsap.registerPlugin(Draggable, InertiaPlugin);
 
 function UploadBox() {
     const insertImage = useDataStore((state) => state.insertImage);
@@ -77,7 +79,7 @@ function UploadBox() {
         Draggable.create(imageRef.current, {
             type: "x,y",
             bounds: ".box",
-            // inertia: true,
+            inertia: true,
 
             onDrag: () => {
                 gsap.to(imageRef.current, {
