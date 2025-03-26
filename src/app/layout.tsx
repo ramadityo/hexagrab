@@ -32,7 +32,7 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             {/* <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>   */}
 
-            <body className={`${jakartasans.variable} antialiased`} suppressHydrationWarning >
+            <body className={`${jakartasans.variable} antialiased`} suppressHydrationWarning>
                 <ClientWrapper>
                     {children}
 

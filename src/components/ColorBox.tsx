@@ -63,8 +63,8 @@ function ColorBox() {
                     {warna.map(
                         (color, index) =>
                             (
-                                <button key={index} onClick={handleCopy(index)} className="button opacity-0 group h-12 md:flex-1 px-3 rounded-md cursor-pointer relative" style={{ backgroundColor: color }}>
-                                    <div className="transition-all opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 flex items-center justify-center">{copied ? <IoCheckmarkDoneOutline /> : color}</div>
+                                <button key={index} onClick={handleCopy(index)} className="button opacity-0 group h-12 md:flex-1 px-3 rounded-md cursor-pointer relative overflow-hidden" style={{ backgroundColor: color }}>
+                                    <div className="transition-all opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 text-white flex items-center justify-center font-sans">{copied ? <IoCheckmarkDoneOutline /> : color}</div>
                                 </button>
                             )
                     )}
