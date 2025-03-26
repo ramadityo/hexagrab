@@ -69,7 +69,7 @@ function ColorBox() {
                             )
                     )}
                 </div>
-                <button className="copy-button w-full bg-white text-black p-3 rounded-md mt-4 font-sans" onClick={bulkCopy()}>
+                <button className="copy-button w-full dark:bg-white dark:text-black bg-[#171717] text-white p-3 rounded-md mt-4 font-sans" onClick={bulkCopy()}>
                     Bulk copy!
                 </button>
             </div>

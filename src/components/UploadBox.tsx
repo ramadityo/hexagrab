@@ -109,7 +109,7 @@ function UploadBox() {
                     className={`absolute flex flex-col items-center justify-center gap-2 transition-all 
                      ${isAnimate ? "hidden" : "inset-0"}`}
                 >
-                    <IconContext.Provider value={{ className: `text-6xl ${isAnimate ? "text-black text-2xl" : "text-white"}` }}>
+                    <IconContext.Provider value={{ className: `text-6xl ${isAnimate ? "text-[#171717] text-2xl" : "dark:text-white text-[#171717]"}` }}>
                         <IoCloudUpload />
                     </IconContext.Provider>
 
