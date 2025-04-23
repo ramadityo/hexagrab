@@ -5,18 +5,26 @@
 
 :root {
   --background: #ffffff;
+  --background2: #f7f7f7;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212;
+    --background2: #1c1c1c;
     --foreground: #ededed;
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: repeating-linear-gradient(
+  45deg,
+  var(--background),
+  var(--background2) 10px,
+  var(--background) 10px,
+  var(--background2) 20px
+);
   font-family: Arial, Helvetica, sans-serif;
 }
