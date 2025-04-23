@@ -112,7 +112,7 @@ function UploadBox() {
                     Turn Images into Colors with One Upload.
                 </p>
             </div>
-            <div ref={boxRef} className={`box relative my-4 h-40 md:h-60 w-full ${isAnimate ? "" : "outline-dashed" } outline-2 rounded-xl group overflow-hidden`} style={{ outlineColor: warna[2] }}>
+            <div ref={boxRef} className={`box relative my-4 h-40 md:h-60 w-full ${isAnimate ? "outline" : "outline-dashed" } outline-2 rounded-xl group overflow-hidden`} style={{ outlineColor: warna[2] }}>
                 <div
                     className={`absolute flex flex-col items-center justify-center gap-2 transition-all 
                      ${isAnimate ? "hidden" : "inset-0"}`}
