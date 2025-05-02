@@ -105,7 +105,15 @@ function UploadBox() {
 
     return (
         <div data-cursor-size="200px" data-cursor-exclusion className={`upload-box h-[450px] max-sm:h-[250px] w-[600px] max-md:w-full ${isLoad ? "" : "hidden"}`}>
-            <div ref={boxRef} className={`box relative  h-full w-full outline-dashed outline-2 rounded-xl group overflow-hidden`} style={{ outlineColor: warna[2] }}>
+            <div id="brand" className="mb-6">
+                <h1 className="text-center leading-none text-preload font-sans max-sm:text-4xl text-6xl font-bold">
+                    HexaGrab
+                </h1>
+                <p className="max-sm:text-base text-center text-preload font-sans text-xl font-medium opacity-60 m ">
+                    Turn Images into Colors with One Upload.
+                </p>
+            </div>
+            <div ref={boxRef} className={`box relative my-4 h-40 md:h-60 w-full ${isAnimate ? "outline" : "outline-dashed" } outline-2 rounded-xl group overflow-hidden`} style={{ outlineColor: warna[2] }}>
                 <div
                     className={`absolute flex flex-col items-center justify-center gap-2 transition-all 
                      ${isAnimate ? "hidden" : "inset-0"}`}
@@ -114,21 +122,17 @@ function UploadBox() {
                         <IoCloudUpload />
                     </IconContext.Provider>
 
-                    {isAnimate ? (
-                        ""
-                    ) : (
+                    {isAnimate ? "" : (
                         <>
-                            <p className="text-upload font-sans">Drag and drop image here</p>
-                            <p className="text-upload font-sans">or</p>
-                            <label htmlFor="image" className="text-upload text-blue-500 font-sans cursor-pointer">
+                            <p className="text-upload font-sans hidden md:block">Drag and drop image here</p>
+                            <p className="text-upload font-sans hidden md:block">or</p>
+                            <label htmlFor="image" className="text-upload md:text-blue-500 font-sans cursor-pointer">
                                 Browse
                             </label>
                         </>
                     )}
                 </div>
-                {isAnimate ? (
-                    ""
-                ) : (
+                {isAnimate ? "" : (
                     <>
                         <input type="file" accept="image/png, image/gif, image/jpeg" name="image" onDrag={handleDrag} id="image" onChange={handleChange} className="absolute z-20 inset-0 opacity-0 cursor-pointer" />
                     </>
