@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "gsap": "^3.12.7",
+    "gsap": "^3.13.0",
     "gsap-trial": "^3.12.7",
     "next": "^15.1.6",
     "node-vibrant": "^4.0.3",

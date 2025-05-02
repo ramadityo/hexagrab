@@ -8,8 +8,9 @@ import { getVibrantColor } from "@/utils/algorithm";
 import { moveContainerUpload, setColorAnimation } from "@/utils/animation";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
+import { InertiaPlugin } from "gsap/InertiaPlugin";
 // import { InertiaPlugin } from "./InertiaPlugin";
-import { InertiaPlugin } from "./InertiaPluginBt";
+// import { InertiaPlugin } from "./InertiaPluginBt";
 // import InertiaPlugin from "gsap-trial/InertiaPlugin";
 
 // gsap.registerPlugin(Draggable);
